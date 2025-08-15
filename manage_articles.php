@@ -4,7 +4,7 @@ if (!isset($_SESSION['userid']) || $_SESSION['usertype'] !== 'author') {
     header("Location: index.php");
     exit();
 }
-require_once 'includes/Database.php';
+require_once 'database.php';
 
 $authorId = $_SESSION['userid'];
 $database = new Database();

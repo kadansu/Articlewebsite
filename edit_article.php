@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $stmt->close();
 }
-$database->closeConnection();
+
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +56,7 @@ $database->closeConnection();
 <head>
     <meta charset="UTF-8">
     <title>Edit Article</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>

@@ -56,7 +56,6 @@ $stmt->bind_param("i", $userId);
 $stmt->execute();
 $user = $stmt->get_result()->fetch_assoc();
 $stmt->close();
-$database->closeConnection();
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +63,7 @@ $database->closeConnection();
 <head>
     <meta charset="UTF-8">
     <title>Update Profile</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
