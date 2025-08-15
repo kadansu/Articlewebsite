@@ -3,10 +3,11 @@ session_start();
 require_once 'database.php';
 
 // Check if user is logged in and has appropriate permissions
-if (!isset($_SESSION['userid']) || ($_SESSION['usertype'] !== 'super_user' && $_SESSION['usertype'] !== 'administrator')) {
+if (!isset($_SESSION['userid']) || !in_array($_SESSION['usertype'], ['super_user', 'administrator'])) {
     header("Location: login.php");
     exit();
 }
+
 
 $error = '';
 $success = '';
@@ -38,15 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     }
 }
-$database->closeConnection();
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add User</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>

@@ -12,7 +12,7 @@ $usertype = $_SESSION['usertype'];
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -27,6 +27,8 @@ $usertype = $_SESSION['usertype'];
         <div class="dashboard-links">
             <a href="update_profile.php" class="dashboard-link">Update My Profile</a>
             <a href="view_articles.php" class="dashboard-link">View Articles</a>
+            <a href="add_article.php" class="dashboard-link">Add Articles</a>
+
 
             <?php if ($usertype === 'super_user'): ?>
                 <a href="manage_users.php" class="dashboard-link">Manage Other Users</a>
